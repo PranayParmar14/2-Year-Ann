@@ -1,0 +1,311 @@
+@import "//fonts.googleapis.com/css?family=Ultra";
+
+html 
+{
+    scroll-behavior: smooth;
+}
+
+.title
+{
+    font-family: 'Ultra', sans-serif;
+   text-transform: uppercase;
+   align-items: center;
+  background-image: linear-gradient(
+    -225deg,
+    #4e2ccc 0%,
+    #b580ed 29%,
+    #dc13ff 67%,
+    #5ae473 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.navbar {
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.navbar a {
+    float: center;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Add transition for smooth effect */
+}
+
+.navbar a:hover {
+    background-color: #3cb043; /* Light green color on hover */
+    color: black;
+}
+
+.active {
+    background-color: transparent;
+    color: white;
+}
+h3 {
+    font-family: 'Ultra', sans-serif;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+}
+h1 {
+    font-family: 'Ultra', sans-serif;
+    text-align: center;
+    color: white;
+}
+* {
+    padding:0;
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+body{
+    background-color: #7851A9;
+    
+}
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+.container{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+    
+}
+@keyframes movedown {
+    0% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.container:nth-child(1){
+    animation-delay: 0s;
+}
+.container:nth-child(2){
+    animation-delay: 1s;
+}
+.container:nth-child(3){
+    animation-delay: 2s;
+}
+.container:nth-child(4){
+    animation-delay:3s;
+}
+.container:nth-child(5){
+    animation-delay: 4s;
+}
+.container:nth-child(6){
+    animation-delay: 5s;
+}
+.container:nth-child(7){
+    animation-delay: 6s;
+}
+.container:nth-child(8){
+    animation-delay: 7s;
+}
+
+
+
+
+.text-box {
+    padding: 20px 30px;
+    background: white;
+    position: relative;
+    border-radius: 6px;
+    font: 15px;
+}
+
+
+.left-container {
+    left: 0;
+
+}
+
+.right-container{
+    left: 50%;
+}
+
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+
+}
+
+@keyframes moveline {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+    
+}
+.text-box h2 {
+    font-weight: 600;
+}
+.text-box small{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid white;
+    right: -15px;
+
+}
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid white;
+    left: -15px;
+
+}
+
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+
+  .mySlides {
+    display: none;
+    text-align: center;
+  }
+
+  .mySlides img {
+    width: auto;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+  }
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+hr{
+    color: white;
+}
+.endingPara {
+    color: white;
+    padding: 20px 40px;
+}
+.endHead {
+    padding-top: 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Ultra', sans-serif;
+}
+@media screen and (min-width: 600px) {
+    /* Adjust styles for devices with a width of 600 pixels or more */
+    .container {
+        width: 50%;
+    }
+}
